@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.AboutActivity"></activity>
+        <activity android:name=".activities.ExtraCoursesActivity" />
+        <activity android:name=".activities.NewsActivity" />
+        <activity android:name=".activities.StaffActivity" />
+        <activity android:name=".activities.StudentActivity" />
         <activity android:name=".activities.HomeActivity" />
         <activity
             android:name=".activities.SplashActivity"
@@ -23,7 +28,7 @@
         <activity
             android:name=".activities.GalleryActivity"
             android:label="@string/title_activity_image_details"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

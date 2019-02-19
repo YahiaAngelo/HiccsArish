@@ -1,18 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeAcitivty">
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                >
+                <ImageButton
+                    android:id="@+id/stu_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@android:drawable/menuitem_background"
+                    android:clickable="true"
+                    android:onClick="student"
+                    />
+
+                <Button
+                    android:id="@+id/stu_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="student"
+                    android:text="الطالب"
+                    android:contextClickable="false"
+                    android:textAlignment="center"
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".80"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:onClick="staff"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/staff_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@android:drawable/menuitem_background"
+                    android:clickable="true"
+                    android:onClick="staff"
+                    android:contextClickable="false"
+
+                    />
+
+                <Button
+                    android:id="@+id/staff_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="staff"
+                    android:text="اعضاء هيئه التدريس"
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/gallery_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+                    android:layout_weight="3"
+                    android:background="@android:drawable/menuitem_background"
+                    android:clickable="true"
+                    android:onClick="Gallery"
+                    android:contextClickable="false"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/gallery_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:onClick="Gallery"
+                    android:text="معرض الصور"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".80"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                >
+                <ImageButton
+                    android:id="@+id/extra_courses_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@android:drawable/menuitem_background"
+                    android:clickable="true"
+                    android:onClick="extra_courses"
+                    />
+
+                <Button
+                    android:id="@+id/extra_courses_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="extra_courses"
+                    android:text="التدريبات والكورسات الاضافيه"
+                    android:contextClickable="false"
+                    android:textAlignment="center"
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                >
+                <ImageButton
+                    android:id="@+id/news_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+
+                    android:contextClickable="false"
+                    android:onClick="news"
+
+                    />
+
+                <Button
+                    android:id="@+id/news_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="news"
+                    android:text="جريده لمعهد "
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                >
+                <ImageButton
+                    android:id="@+id/about_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@android:drawable/menuitem_background"
+                    android:clickable="true"
+                    android:onClick="about"
+                    />
+
+                <Button
+                    android:id="@+id/about_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="about"
+                    android:text="نبذه عن المعهد"
+                    android:contextClickable="false"
+                    android:textAlignment="center"
+                    android:background="@android:drawable/menuitem_background"
+
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".50"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+
+            <ImageButton
+                android:id="@+id/imkagedVihew"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_www"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="website"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                app:srcCompat="@drawable/ic_phone"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="website"
+                app:srcCompat="@drawable/ic_placeholder"
+
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".300"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <ImageButton
+                android:id="@+id/facebook"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="facebook"
+                app:srcCompat="@drawable/ic_facebook"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="OnClick,VectorDrawableCompat" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="website"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                app:srcCompat="@drawable/ic_linkedin"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="website"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_youtube"/>
+
+
+            />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
