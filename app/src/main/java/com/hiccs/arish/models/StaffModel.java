@@ -1,47 +1,45 @@
 package com.hiccs.arish.models;
 
-import android.media.Image;
-
-import org.w3c.dom.Text;
-
 public class StaffModel {
-    private int dr_img;
-    private String dr_name,dr_des;
+    private int id;
+    private String name, description, image_link;
 
-    public int getDr_img() {
-        return dr_img;
+    public StaffModel(int id, String name, String description, String image_link) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.image_link = image_link;
     }
 
-    public void setDr_img(int dr_img) {
-        this.dr_img = dr_img;
+    public int getId() {
+        return id;
     }
 
-    public String getDr_name() {
-        return dr_name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setDr_name(String dr_name) {
-        this.dr_name = dr_name;
+    public String getName() {
+        return name;
     }
 
-    public String getDr_des() {
-        return dr_des;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDr_des(String dr_des) {
-        this.dr_des = dr_des;
+    public String getDescription() {
+        return description;
     }
 
-    public StaffModel(int dr_img, String dr_name, String dr_des) {
-        this.dr_img = dr_img;
-        this.dr_name = dr_name;
-        this.dr_des = dr_des;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public StaffModel(int dr_img, Text dr_name, Text dr_des) {
-        this.dr_img = dr_img;
-
+    public String getImage_link() {
+        return image_link;
     }
 
-
+    public void setImage_link(String image_link) {
+        this.image_link = image_link;
+    }
 }
