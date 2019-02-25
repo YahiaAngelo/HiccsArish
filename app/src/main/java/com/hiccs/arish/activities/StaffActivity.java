@@ -37,7 +37,7 @@ public class StaffActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
-
+/*
         if (ConnectionManager.isIntenetConectted(this))
         {
             load_data_from_server(0);
@@ -45,7 +45,7 @@ public class StaffActivity extends AppCompatActivity {
         else
 
             Toast.makeText(this, "Please check internet", Toast.LENGTH_SHORT).show();
-
+*/
 
         recyclerView = (RecyclerView) findViewById(R.id.staff_recycler);
        sttaffList  = new ArrayList<>();
