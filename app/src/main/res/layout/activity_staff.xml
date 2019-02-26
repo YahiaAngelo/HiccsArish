@@ -5,47 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.StaffActivity">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme"
-        android:background="@android:color/white"
-        tools:ignore="MissingConstraints"
-        >
+        tools:ignore="MissingConstraints">
+
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorAccent"
             app:collapsedTitleTextAppearance="@android:color/transparent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            >
+            app:contentScrim="?attr/colorAccent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
             <ImageButton
-                android:background="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
+                android:background="@android:color/white"
                 android:contentDescription="@string/app_name"
                 android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                />
+                android:scaleType="centerCrop" />
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-<android.support.v4.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="true"
-
-    android:layout_marginTop="250dp"
-    >
-    <android.support.v7.widget.RecyclerView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/staff_recycler"
-        >
+        android:layout_marginTop="250dp"
 
-    </android.support.v7.widget.RecyclerView>
-</android.support.v4.widget.NestedScrollView>
+        android:clipToPadding="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/staff_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.NestedScrollView>
 </android.support.constraint.ConstraintLayout>

@@ -29,7 +29,7 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.staff_item,parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.staff_item, parent, false);
 
         return new ViewHolder(itemView);
     }
@@ -48,9 +48,9 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
         return staff_List.size();
     }
 
-    public  class ViewHolder extends  RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name,description;
+        public TextView name, description;
         public ImageView imageView;
 
         public ViewHolder(View itemView) {

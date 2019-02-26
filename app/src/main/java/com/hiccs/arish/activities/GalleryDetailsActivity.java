@@ -89,6 +89,44 @@ public class GalleryDetailsActivity extends AppCompatActivity {
         });
     }
 
+    public static class PlaceholderFragment extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number";
+        private static final String ARG_IMG_TITLE = "image_name";
+        private static final String ARG_IMG_URL = "image_url";
+        String imageName;
+        String imageUrl;
+        int position;
+
+        public PlaceholderFragment() {
+        }
+
+        public static PlaceholderFragment newInstance(int sectionNumber, String imageName, String imageUrl) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            args.putString(ARG_IMG_TITLE, imageName);
+            args.putString(ARG_IMG_URL, imageUrl);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        @Override
+        public void setArguments(Bundle args) {
+            super.setArguments(args);
+            this.position = args.getInt(ARG_SECTION_NUMBER);
+            this.imageName = args.getString(ARG_IMG_TITLE);
+            this.imageUrl = args.getString(ARG_IMG_URL);
+        }
+
+        @Override
+        public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_image_details, container, false);
+            ImageView image = rootView.findViewById(R.id.fragmentDetailsImage);
+            Glide.with(this).load(imageUrl).into(image);
+            return rootView;
+        }
+    }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
         public List<GalleryImages> gallery;
@@ -114,45 +152,6 @@ public class GalleryDetailsActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             return gallery.get(position).getImageName();
-        }
-    }
-
-    public static class PlaceholderFragment extends Fragment {
-        String imageName;
-        String imageUrl;
-        int position;
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        private static final String ARG_IMG_TITLE = "image_name";
-        private static final String ARG_IMG_URL = "image_url";
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public void setArguments(Bundle args) {
-            super.setArguments(args);
-            this.position = args.getInt(ARG_SECTION_NUMBER);
-            this.imageName = args.getString(ARG_IMG_TITLE);
-            this.imageUrl = args.getString(ARG_IMG_URL);
-        }
-
-        public static PlaceholderFragment newInstance(int sectionNumber, String imageName, String imageUrl) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            args.putString(ARG_IMG_TITLE, imageName);
-            args.putString(ARG_IMG_URL, imageUrl);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_image_details, container, false);
-            ImageView image = rootView.findViewById(R.id.fragmentDetailsImage);
-            Glide.with(this).load(imageUrl).into(image);
-            return rootView;
         }
     }
 

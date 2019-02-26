@@ -1,8 +1,8 @@
 package com.hiccs.arish.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.hiccs.arish.R;
@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
+
     public void student(View view) {
         Intent i = new Intent(HomeActivity.this, StudentActivity.class);
         startActivity(i);

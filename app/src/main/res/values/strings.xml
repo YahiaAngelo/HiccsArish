@@ -2,5 +2,7 @@
     <string name="app_name">Hiccs Arish</string>
 
     <string name="title_activity_image_details">GalleryDetailsActivity</string>
+    <string name="list_item_news_image_content_description">News Image</string>
+    <string name="list_item_news_title_label">News Title</string>
 
 </resources>

@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hiccs.arish">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,9 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.GalleryDetailsActivity" />
+        <activity android:name=".activities.GalleryActivity" />
         <activity
-            android:name=".activities.GalleryActivity"
+            android:name=".activities.GalleryDetailsActivity"
             android:label="@string/title_activity_image_details"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
