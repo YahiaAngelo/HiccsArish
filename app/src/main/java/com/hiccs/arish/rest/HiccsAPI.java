@@ -4,6 +4,7 @@ package com.hiccs.arish.rest;
  * Created by AbdullahAtta on 2/26/2019.
  */
 
+import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.news.News;
 
 import java.util.List;
@@ -20,4 +21,9 @@ public interface HiccsAPI {
 
     @GET("news/endpoint")
     Call<List<News>> getHICCSNews();
+
+
+    @GET("staff.php")
+    Call<List<StaffModel>> getStaffModel();
 }
+

@@ -1,6 +1,7 @@
 package com.hiccs.arish.adapters;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,34 +13,38 @@ import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.StaffModel;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> {
 
     private Context staffcontext;
-    private ArrayList<StaffModel> staff_List;
+    private List<StaffModel> staff_List;
 
-    public StaffAdapter(Context context, ArrayList<StaffModel> staff_List) {
+    public StaffAdapter(Context context, List<StaffModel> staff_List) {
 
         this.staffcontext = context;
         this.staff_List = staff_List;
 
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.staff_item, parent, false);
+        View itemView = LayoutInflater.from(staffcontext).inflate(R.layout.staff_item, parent, false);
 
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.name.setText(staff_List.get(position).getDescription());
-        holder.description.setText(staff_List.get(position).getDescription());
-        Glide.with(staffcontext).load(staff_List.get(position).getImage_link()).into(holder.imageView);
+        holder.staff_name.setText(staff_List.get(position).getName());
+        holder.staff_des.setText(staff_List.get(position).getDescription());
+        Glide.with(staffcontext).load(staff_List.get(position).getImage_link()).into(holder.staff_img);
 
     }
 
@@ -49,15 +54,18 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.staff_name)
+        TextView staff_name;
+        @BindView(R.id.staff_des)
+        TextView staff_des;
+        @BindView(R.id.staff_img)
+        ImageView staff_img;
 
-        public TextView name, description;
-        public ImageView imageView;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.staff_name);
-            description = (TextView) itemView.findViewById(R.id.staff_des);
-            imageView = (ImageView) itemView.findViewById(R.id.staff_img);
+            ButterKnife.bind(this, itemView);
+
         }
     }
 }
