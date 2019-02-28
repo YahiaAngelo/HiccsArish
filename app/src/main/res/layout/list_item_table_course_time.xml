@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/list_item_table_course_name_parent_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/listItemCourseTimeNameLabel"
+        android:layout_width="@dimen/list_item_table_course_name_label_width"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/list_item_table_course_name_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+    <TextView
+        android:id="@+id/listItemCourseTimeProfNameLabel"
+        android:layout_width="@dimen/list_item_table_course_prof_name_label_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_item_table_course_prof_name_label_margin_top"
+        android:gravity="center"
+        android:text="@string/list_item_table_course_prof_name_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat"
+        android:textSize="@dimen/list_item_table_course_prof_name_label_text_size" />
+
+    <TextView
+        android:id="@+id/listItemCourseTimeDurationLabel"
+        android:layout_width="@dimen/list_item_table_course_duration_label_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_item_table_course_duration_label_margin"
+        android:gravity="center"
+        android:text="@string/list_item_table_course_duration_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+</LinearLayout>

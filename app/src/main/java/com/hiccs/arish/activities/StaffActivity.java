@@ -2,15 +2,16 @@ package com.hiccs.arish.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.StaffAdapter;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.rest.APIUtils;
+
 import java.util.List;
-import butterknife.BindString;
+
 import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.Callback;
