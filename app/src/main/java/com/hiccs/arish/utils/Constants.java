@@ -10,4 +10,6 @@ public class Constants {
 
     public static final String GALLERY_LIST_INTENT_KEY = "com.hiccs.arish.gallery_list_key";
     public static final String GALLERY_POSITION_INTENT_KEY = "com.hiccs.arish.gallery_position_key";
+
+    public static final int WORKING_DAYS_OF_WEEK = 5;
 }

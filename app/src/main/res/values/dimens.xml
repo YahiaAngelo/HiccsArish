@@ -6,6 +6,23 @@
     <dimen name="list_item_news_parent_margin">8dp</dimen>
     <dimen name="list_item_news_parent_corner_radius">8dp</dimen>
     <dimen name="list_item_news_parent_elevation">1dp</dimen>
+    <dimen name="list_item_table_parent_corner_radius">8dp</dimen>
+    <dimen name="list_item_table_parent_elevation">1dp</dimen>
+    <dimen name="list_item_table_parent_margin">8dp</dimen>
+
     <dimen name="list_item_news_image_height">200dp</dimen>
     <dimen name="list_item_news_title_padding">8dp</dimen>
+    <dimen name="courses_table_recyclerview_margin">8dp</dimen>
+    <dimen name="list_item_table_course_name_parent_margin">8dp</dimen>
+    <dimen name="list_item_table_course_name_label_width">90dp</dimen>
+    <dimen name="list_item_table_course_prof_name_label_width">90dp</dimen>
+    <dimen name="list_item_table_course_prof_name_label_margin_top">2dp</dimen>
+    <dimen name="list_item_table_course_prof_name_label_text_size">12sp</dimen>
+    <dimen name="list_item_table_course_duration_label_width">90dp</dimen>
+    <dimen name="list_item_table_course_duration_label_margin">2dp</dimen>
+    <dimen name="list_item_table_day_parent_height">100dp</dimen>
+    <dimen name="list_item_table_day_label_width">60dp</dimen>
+    <dimen name="list_item_table_day_divider_height">60dp</dimen>
+    <dimen name="list_item_table_day_divider_margin">4dp</dimen>
+    <dimen name="list_item_table_day_divider_width">0.5dp</dimen>
 </resources>
