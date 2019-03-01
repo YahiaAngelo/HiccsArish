@@ -4,6 +4,8 @@ package com.hiccs.arish.rest;
  * Created by AbdullahAtta on 2/26/2019.
  */
 
+import android.util.Log;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -18,12 +20,16 @@ public class HiccsClient {
 
     public static Retrofit getsRetrofit(String baseURL) {
         if (sRetrofit == null) {
+            Log.v("server_data", "Started to get Retrofit");
             sRetrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
                     // using GsonConverterFactory to convert
                     // JSON response automatically to POGOs "models"
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
+
+            Log.v("server_data", "Done getting Retrofit");
+
         }
         return sRetrofit;
     }

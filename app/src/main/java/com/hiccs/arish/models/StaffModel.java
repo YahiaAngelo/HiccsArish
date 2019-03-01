@@ -1,45 +1,53 @@
 package com.hiccs.arish.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class StaffModel {
-    private int id;
-    private String name, description, image_link;
 
-    public StaffModel(int id, String name, String description, String image_link) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.image_link = image_link;
-    }
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("dr_name")
+    @Expose
+    private String dr_name;
+    @SerializedName("dr_des")
+    @Expose
+    private String dr_des;
+    @SerializedName("dr_img_url")
+    @Expose
+    private String dr_img_url;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDrName() {
+        return dr_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDrName(String drName) {
+        this.dr_name = drName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDrDes() {
+        return dr_des;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDrDes(String drDes) {
+        this.dr_des = drDes;
     }
 
-    public String getImage_link() {
-        return image_link;
+    public String getDrImgUrl() {
+        return dr_img_url;
     }
 
-    public void setImage_link(String image_link) {
-        this.image_link = image_link;
+    public void setDrImgUrl(String drImgUrl) {
+        this.dr_img_url = drImgUrl;
     }
+
 }

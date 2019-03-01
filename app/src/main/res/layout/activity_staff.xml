@@ -14,22 +14,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="MissingConstraints">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:fitsSystemWindows="true"
-            app:collapsedTitleTextAppearance="@android:color/transparent"
-            app:contentScrim="?attr/colorAccent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@android:color/white"
-                android:contentDescription="@string/app_name"
-                android:fitsSystemWindows="true"
-                android:scaleType="centerCrop" />
-        </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
