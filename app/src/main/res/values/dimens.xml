@@ -2,7 +2,7 @@
 <resources>
     <dimen name="list_item_gallery_width">150dp</dimen>
     <dimen name="list_item_gallery_height">200dp</dimen>
-    <dimen name="list_item_gallery_margin">4dp</dimen>
+    <dimen name="list_item_gallery_margin">2dp</dimen>
     <dimen name="list_item_news_parent_margin">8dp</dimen>
     <dimen name="list_item_news_parent_corner_radius">8dp</dimen>
     <dimen name="list_item_news_parent_elevation">1dp</dimen>

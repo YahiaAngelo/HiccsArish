@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.CoursesTableActivity"/>
+        <activity android:name=".activities.CoursesTableActivity" />
         <activity android:name=".activities.AboutActivity" />
         <activity android:name=".activities.ExtraCoursesActivity" />
         <activity android:name=".activities.NewsActivity" />

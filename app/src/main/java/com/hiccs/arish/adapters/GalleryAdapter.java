@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.hiccs.arish.R;
 import com.hiccs.arish.activities.GalleryDetailsActivity;
 import com.hiccs.arish.models.GalleryImages;
@@ -44,7 +45,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     public void onBindViewHolder(@NonNull GalleryViewHolder galleryViewHolder, int i) {
         Glide.with(mContext)
                 .load(mGallery.get(i).getImageUrl())
-                .thumbnail(0.f)
+                .thumbnail(0.25f)
+                .transition(DrawableTransitionOptions.withCrossFade())
                 .into(galleryViewHolder.galleryImage);
     }
 
