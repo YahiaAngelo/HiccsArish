@@ -6,6 +6,8 @@ package com.hiccs.arish.rest;
 
 import android.util.Log;
 
+import com.hiccs.arish.utils.Constants;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -28,9 +30,8 @@ public class HiccsClient {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-            Log.v("server_data", "Done getting Retrofit");
-
         }
+        Log.v(Constants.NETWORK_TAG, "Done getting Retrofit");
         return sRetrofit;
     }
 }

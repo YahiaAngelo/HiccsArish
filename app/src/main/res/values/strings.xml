@@ -4,5 +4,9 @@
     <string name="title_activity_image_details">GalleryDetailsActivity</string>
     <string name="list_item_news_image_content_description">News Image</string>
     <string name="list_item_news_title_label">News Title</string>
+    <string name="list_item_table_course_name_label">Course</string>
+    <string name="list_item_table_course_prof_name_label">Prof. Name</string>
+    <string name="list_item_table_course_duration_label">Dura : tion</string>
+    <string name="list_item_table_day_label">Day</string>
 
 </resources>

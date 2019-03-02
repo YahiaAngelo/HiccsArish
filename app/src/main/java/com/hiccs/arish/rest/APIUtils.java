@@ -2,6 +2,8 @@ package com.hiccs.arish.rest;
 
 import android.util.Log;
 
+import com.hiccs.arish.utils.Constants;
+
 /**
  * Created by AbdullahAtta on 2/26/2019.
  */
@@ -10,7 +12,7 @@ public class APIUtils {
 
     public static HiccsAPI getHiccsAPI() {
         HiccsAPI hiccsAPI = HiccsClient.getsRetrofit(BASE_URL).create(HiccsAPI.class);
-        Log.v("server_data", "started fetching api");
+        Log.v(Constants.NETWORK_TAG, "started fetching api");
         return hiccsAPI;
     }
 }

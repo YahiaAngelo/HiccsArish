@@ -13,6 +13,7 @@ import com.hiccs.arish.rest.APIUtils;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,6 +27,7 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+        ButterKnife.bind(this);
         loadNews();
     }
 
@@ -37,15 +39,19 @@ public class NewsActivity extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             setNewsToAdapter(response.body());
                         } else {
-                            Log.d(TAG, "response code = " + response.code());
+                            logger(String.valueOf(response.code()));
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<News>> call, Throwable t) {
-                        Log.d(TAG, t.getMessage());
+                        logger(t.getMessage());
                     }
                 });
+    }
+
+    private void logger(String msg) {
+        Log.d(TAG, msg);
     }
 
     private void setNewsToAdapter(List<News> body) {
