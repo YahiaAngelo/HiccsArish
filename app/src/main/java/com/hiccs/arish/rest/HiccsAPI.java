@@ -4,6 +4,7 @@ package com.hiccs.arish.rest;
  * Created by AbdullahAtta on 2/26/2019.
  */
 
+import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.news.News;
 
@@ -25,5 +26,10 @@ public interface HiccsAPI {
 
     @GET("staff.php")
     Call<List<StaffModel>> getStaffModel();
+
+
+    @GET("ExtraCourses.php")
+    Call<List<ExtraCoursesModel>> getExtraCoursesModel();
+
 }
 

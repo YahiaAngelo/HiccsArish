@@ -41,8 +41,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void about(View view) {
-        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
+    public void info(View view) {
+        Intent i = new Intent(HomeActivity.this, HicssInfoActivity.class);
         startActivity(i);
     }
 }

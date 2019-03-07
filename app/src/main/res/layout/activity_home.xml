@@ -267,7 +267,7 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/menuitem_background"
                     android:contextClickable="false"
-                    android:onClick="about"
+                    android:onClick="info"
                     android:text="نبذه عن المعهد"
                     android:textAlignment="center"
 

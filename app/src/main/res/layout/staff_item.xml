@@ -11,7 +11,7 @@
 
         >
 
-        <ImageButton
+        <ImageView
             android:id="@+id/staff_img"
             android:layout_width="128dp"
             android:layout_height="128dp" />

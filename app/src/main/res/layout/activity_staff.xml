@@ -5,23 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".activities.StaffActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="MissingConstraints">
 
 
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="250dp"
-
-        android:clipToPadding="true">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/staff_recycler"
@@ -29,5 +14,4 @@
             android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
-    </android.support.v4.widget.NestedScrollView>
 </android.support.constraint.ConstraintLayout>
