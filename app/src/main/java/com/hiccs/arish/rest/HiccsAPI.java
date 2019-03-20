@@ -7,7 +7,6 @@ package com.hiccs.arish.rest;
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.news.News;
-import com.hiccs.arish.models.suggestionsModel;
 
 import java.util.List;
 
@@ -35,8 +34,6 @@ public interface HiccsAPI {
     Call<List<ExtraCoursesModel>> getExtraCourses();
 
 
-    @POST("suggestions.php")
-    Call<List<suggestionsModel>> postSuggestions(@Field("title")String title,@Field("content")String content);
 
 
 

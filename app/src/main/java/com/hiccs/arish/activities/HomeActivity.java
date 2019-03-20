@@ -46,8 +46,5 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void map(View view) {
-        Intent i = new Intent(HomeActivity.this, MapsActivity.class);
-        startActivity(i);
-    }
+
 }
