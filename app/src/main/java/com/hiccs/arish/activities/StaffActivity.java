@@ -60,7 +60,7 @@ public class StaffActivity extends AppCompatActivity {
     }
 
     private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG, s);
+        Log.v(Constants.NETWORK_TAG,s);
     }
 
     private void linkstaffAdapter(List<StaffModel> body) {

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.activities.ExtraCoursesActivity;
 import com.hiccs.arish.models.ExtraCoursesModel;
@@ -32,7 +33,8 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
     @Override
     public ExtraCoursesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(ExtraCoursesContext).inflate(R.layout.extra_courses_item, parent, false);
+        View itemView = LayoutInflater.from(ExtraCoursesContext).inflate(R.layout.extra_courses_item, parent,
+                false);
 
         return new ViewHolder(itemView);
     }
@@ -40,11 +42,11 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
     @Override
     public void onBindViewHolder(@NonNull ExtraCoursesAdapter.ViewHolder holder, int position) {
 
-/*
-        holder.extra_course_name.setText(Extra_Courses_List.get(position).());
-        holder.extra_course_des.setText(Extra_Courses_List.get(position).());
-        Glide.with(ExtraCoursesContext).load(Extra_Courses_List.get(position).()).into(holder.);
-*/
+
+        holder.extra_course_name.setText(Extra_Courses_List.get(position).getCourseName());
+        holder.extra_course_des.setText(Extra_Courses_List.get(position).getDescription());
+        Glide.with(ExtraCoursesContext).load(Extra_Courses_List.get(position).getImgUrl()).into(holder.extra_course_img);
+
     }
 
     @Override
@@ -62,6 +64,10 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
 
         public ViewHolder(@NonNull View itemView) {
+
+
+
+
             super(itemView);
             ButterKnife.bind(this, itemView);
 

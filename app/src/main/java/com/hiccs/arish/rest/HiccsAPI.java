@@ -7,11 +7,14 @@ package com.hiccs.arish.rest;
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.news.News;
+import com.hiccs.arish.models.suggestionsModel;
 
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 
 /**
  * this is the interface that holds all the networks call being used
@@ -28,8 +31,14 @@ public interface HiccsAPI {
     Call<List<StaffModel>> getStaffModel();
 
 
-    @GET("ExtraCourses.php")
-    Call<List<ExtraCoursesModel>> getExtraCoursesModel();
+    @GET("additional_courses.php")
+    Call<List<ExtraCoursesModel>> getExtraCourses();
+
+
+    @POST("suggestions.php")
+    Call<List<suggestionsModel>> postSuggestions(@Field("title")String title,@Field("content")String content);
+
+
 
 }
 

@@ -6,6 +6,8 @@ package com.hiccs.arish.rest;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.hiccs.arish.utils.Constants;
 
 import retrofit2.Retrofit;
@@ -19,7 +21,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HiccsClient {
 
     private static Retrofit sRetrofit;
-
+   Gson gson = new GsonBuilder()
+            .setLenient()
+            .create();
     public static Retrofit getsRetrofit(String baseURL) {
         if (sRetrofit == null) {
             Log.v("server_data", "Started to get Retrofit");

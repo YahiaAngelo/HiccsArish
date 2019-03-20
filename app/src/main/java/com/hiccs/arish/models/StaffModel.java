@@ -8,15 +8,15 @@ public class StaffModel {
     @SerializedName("id")
     @Expose
     private String id;
-    @SerializedName("dr_name")
+    @SerializedName("drName")
     @Expose
-    private String dr_name;
-    @SerializedName("dr_des")
+    private String drName;
+    @SerializedName("description")
     @Expose
-    private String dr_des;
-    @SerializedName("dr_img_url")
+    private String description;
+    @SerializedName("imgUrl")
     @Expose
-    private String dr_img_url;
+    private String imgUrl;
 
     public String getId() {
         return id;
@@ -27,27 +27,27 @@ public class StaffModel {
     }
 
     public String getDrName() {
-        return dr_name;
+        return drName;
     }
 
     public void setDrName(String drName) {
-        this.dr_name = drName;
+        this.drName = drName;
     }
 
-    public String getDrDes() {
-        return dr_des;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDrDes(String drDes) {
-        this.dr_des = drDes;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getDrImgUrl() {
-        return dr_img_url;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setDrImgUrl(String drImgUrl) {
-        this.dr_img_url = drImgUrl;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
 }

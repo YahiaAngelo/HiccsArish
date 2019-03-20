@@ -38,7 +38,7 @@ public class ExtraCoursesActivity extends AppCompatActivity {
 
     private void ExtraCourses() {
         logger("Started to fetch staff");
-        APIUtils.getHiccsAPI().getExtraCoursesModel()
+        APIUtils.getHiccsAPI().getExtraCourses()
                 .enqueue(new Callback<List<ExtraCoursesModel>>() {
                     @Override
                     public void onResponse(Call<List<ExtraCoursesModel>> call, Response<List<ExtraCoursesModel>> response) {

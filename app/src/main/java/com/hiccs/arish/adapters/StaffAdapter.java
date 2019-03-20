@@ -43,8 +43,8 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.staff_name.setText(staff_List.get(position).getDrName());
-        holder.staff_des.setText(staff_List.get(position).getDrDes());
-        Glide.with(staffcontext).load(staff_List.get(position).getDrImgUrl()).into(holder.staff_img);
+        holder.staff_des.setText(staff_List.get(position).getDescription());
+        Glide.with(staffcontext).load(staff_List.get(position).getImgUrl()).into(holder.staff_img);
 
     }
 

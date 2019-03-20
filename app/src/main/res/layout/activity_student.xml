@@ -1,8 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.StudentActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/student"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:onClick="StudentAccount"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="StudentAccount"
+                        android:text="حسابي"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:onClick="inbox" />
+
+                    <TextView
+                        android:id="@+id/tvmap"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="inbox"
+                        android:text="بريدي"
+                        android:gravity="center"
+
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                        android:textColor="@android:color/black" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/about"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:onClick="Courses_table"
+                        android:gravity="center"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvnews"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="Courses_table"
+                        android:text="جدول المحاضرات"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:contextClickable="false"
+                        android:onClick="previos_exams" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="previos_exams"
+                        android:text="امتحانات سابقه "
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/studentf"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:onClick="suggestion" />
+
+                    <TextView
+                        android:id="@+id/tvvcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="suggestion"
+                        android:text="اقترح"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/aboduft"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:onClick="report" />
+
+                    <TextView
+                        android:id="@+id/tvnefws"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="report"
+                        android:text="التقدير العام"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

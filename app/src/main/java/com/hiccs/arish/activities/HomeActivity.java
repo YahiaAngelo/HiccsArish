@@ -41,8 +41,13 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void info(View view) {
+    public void infoo(View view) {
         Intent i = new Intent(HomeActivity.this, HicssInfoActivity.class);
+        startActivity(i);
+    }
+
+    public void map(View view) {
+        Intent i = new Intent(HomeActivity.this, MapsActivity.class);
         startActivity(i);
     }
 }
